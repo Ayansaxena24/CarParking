@@ -196,14 +196,14 @@ const SlotPage = () => {
               aria-describedby="modal-modal-description"
             >
               <div className="w-full h-full flex justify-center items-center text-white">
-                <div className="relative bg-gray-900 sm:w-1/3 sm:h-1/3 px-2 py-2 sm:px-0 sm:py-0 rounded-md flex flex-col justify-center items-center">
+                <div className="relative bg-gray-900 md:w-1/2 lg:w-1/3 md:h-1/3 px-2 py-2 md:px-0 md:py-0 rounded-md flex flex-col justify-center items-center">
                   <button
                     className="absolute right-3 top-1 hover:rounded-md hover:px-2 hover:bg-red-600 duration-300 ease-in-out"
                     onClick={handleCloseModal}
                   >
                     X
                   </button>
-                  <div className="flex flex-col mt-6 sm:mt-0 justify-start sm:space-y-0 space-y-2 sm:flex sm:flex-row space-x-2 sm:justify-center sm:items-center">
+                  <div className="flex bg-gray-900 w-full pb-3 pt-2 flex-col mt-10 md:mt-6 sm:mt-0 justify-start sm:space-y-0 space-y-2 md:flex md:flex-row space-x-2 sm:justify-center sm:items-center">
                     <label htmlFor="registrationNumber" className="ml-2">
                       Registration Number :
                     </label>
@@ -223,7 +223,7 @@ const SlotPage = () => {
                     <p></p>
                   </div>
                   <br />
-                  <div className="w-full flex justify-center items-center mb-2 sm:mb-0">
+                  <div className="w-full bg-gray-900 pt-4 pb-4 flex justify-center items-center mb-2 sm:mb-0">
                     <button
                       className="rounded-2xl duration-300 ease-in-out hover:shadow-lg hover:shadow-violet-400 hover:border-violet-400 border-2 px-2 py-1"
                       onClick={handleModalSubmit}
