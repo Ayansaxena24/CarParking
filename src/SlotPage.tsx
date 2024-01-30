@@ -129,12 +129,12 @@ const SlotPage = () => {
       <div
         className={`bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r mr-10 w-screen h-fit ${ submitted ? " h-fit" : "h-screen" }`}
       >
-        <div className="pt-4 mr-10 flex justify-end">
+        <div className="sm:pt-4 pt-1 mb-4 sm:mb-0 sm:mr-10 mr-2 flex justify-end">
           <p className="text-lg font-semibold text-white">Welcome, Owner</p>
         </div>
 
         {submitted === false && spaces <= 0 ? (
-          <div className="flex flex-col justify-center items-center absolute top-[50%] right-[30%] border-2 rounded-md px-10 py-6">
+          <div className="flex flex-col justify-center items-center absolute top-[40%] mx-2 sm:mx-0 sm:top-[50%] sm:right-[30%] border-2 rounded-md px-10 py-6">
             <div className="grid grid-cols-2 space-x-2">
               <p className="text-white mt-1">
                 Enter required number of Parking Spaces
@@ -177,7 +177,7 @@ const SlotPage = () => {
                 Allocate any Available Space
               </button>
             </div>
-            <div className="w-full grid space-x-1 space-y-1 z-50 grid-cols-4 justify-center items-center min-h-[100vh] absolute top-30 -z-10 bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r">
+            <div className="w-full grid space-x-1 space-y-1 z-50 sm:grid-cols-4 grid-cols-2 justify-center items-center min-h-[100vh] absolute top-30 -z-10 bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r">
               {parkingSpaces.map((space: any) => (
                 <div onClick={() => handleOpenModal(space.id)}>
                   <ParkingSpaceCard
@@ -196,19 +196,19 @@ const SlotPage = () => {
               aria-describedby="modal-modal-description"
             >
               <div className="w-full h-full flex justify-center items-center text-white">
-                <div className="relative bg-gray-900 w-1/3 h-1/3 rounded-md flex flex-col justify-center items-center">
+                <div className="relative bg-gray-900 sm:w-1/3 sm:h-1/3 px-2 py-2 sm:px-0 sm:py-0 rounded-md flex flex-col justify-center items-center">
                   <button
                     className="absolute right-3 top-1 hover:rounded-md hover:px-2 hover:bg-red-600 duration-300 ease-in-out"
                     onClick={handleCloseModal}
                   >
                     X
                   </button>
-                  <div className="flex space-x-2 justify-center items-center">
-                    <label htmlFor="registrationNumber">
+                  <div className="flex flex-col mt-6 sm:mt-0 justify-start sm:space-y-0 space-y-2 sm:flex sm:flex-row space-x-2 sm:justify-center sm:items-center">
+                    <label htmlFor="registrationNumber" className="ml-2">
                       Registration Number :
                     </label>
                     <input
-                      className="bg-gray-400 rounded-lg text-black pl-1"
+                      className="bg-gray-400 rounded-lg text-black pl-1 "
                       type="text"
                       id="registrationNumber"
                       value={registrationNumber}
@@ -216,14 +216,14 @@ const SlotPage = () => {
                     />
                   </div>
                   <br />
-                  <div className="flex justify-between w-full">
+                  <div className="flex flex-col pl-2 sm:pl-0 sm:flex sm:flex-row justify-between w-full">
                     <p></p>
                     <label htmlFor="inTime">Vehicle Entry Time :</label>
                     <p className="text-white"> {inTime}</p>
                     <p></p>
                   </div>
                   <br />
-                  <div className="w-full flex justify-center items-center">
+                  <div className="w-full flex justify-center items-center mb-2 sm:mb-0">
                     <button
                       className="rounded-2xl duration-300 ease-in-out hover:shadow-lg hover:shadow-violet-400 hover:border-violet-400 border-2 px-2 py-1"
                       onClick={handleModalSubmit}

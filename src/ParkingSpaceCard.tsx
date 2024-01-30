@@ -44,7 +44,7 @@ const ParkingSpaceCard: React.FC<ParkingSpaceCardProps> = ({ space }) => {
     >
       <div onClick={() => handleCardClick}>
         {space.occupied ? (
-          <div className="py-8 space-y-2">
+          <div className="sm:py-8 py-5 min-h-[25vh] sm:h space-y-2">
             <strong>Parking Space {space.id}</strong>
             <div>
               <p className="text-red-300">Occupied</p>
