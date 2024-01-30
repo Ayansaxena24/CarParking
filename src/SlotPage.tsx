@@ -177,7 +177,7 @@ const SlotPage = () => {
                 Allocate any Available Space
               </button>
             </div>
-            <div className="w-full grid space-x-1 space-y-1 z-50 sm:grid-cols-4 grid-cols-2 justify-center items-center min-h-[100vh] absolute top-30 -z-10 bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r">
+            <div className="w-full grid space-x-1 space-y-1 z-50 sm:grid-cols-3 md:grid-cols-4 grid-cols-2 justify-center items-center min-h-[100vh] absolute top-30 bg-gradient-to-b from-gray-900 to-gray-600 bg-gradient-to-r">
               {parkingSpaces.map((space: any) => (
                 <div onClick={() => handleOpenModal(space.id)}>
                   <ParkingSpaceCard
